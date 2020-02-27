@@ -17,3 +17,9 @@ alias ga='git add'
 alias ll='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
+alias e='emacs'
+alias emacs='emacs -nw'
+
+# k8s
+alias k='kubectl'
+
