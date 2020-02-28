@@ -3,9 +3,13 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
- 
+
+
+;; ### Improve startup speed
 (setq package-enable-at-startup nil)
 (setq gc-cons-threshold 100000000)
+
+;; ### Config
 (setq inhibit-startup-screen t)
 (setq vc-follow-symlinks t)
 (menu-bar-mode -1)
@@ -13,22 +17,24 @@
 (package-initialize)
 
 
-
-;; Adjust font size like web browsers
+;; ### Custom Keybinds
 (global-set-key (kbd "C-=") #'text-scale-increase)
 (global-set-key (kbd "C-+") #'text-scale-increase)
 (global-set-key (kbd "C--") #'text-scale-decrease)
-;; Move up/down paragraph
 (global-set-key (kbd "M-n") #'forward-paragraph)
 (global-set-key (kbd "M-p") #'backward-paragraph)
 
 
+;; ### use-package
 (eval-when-compile
   (add-to-list 'load-path "/home/nhartman/.emacs.d/elpa/use-package-20191126.2034/")
   (require 'use-package))
 
+;; ### Packages
 (use-package helm
   :ensure t)
+(use-package dired
+  :ensure nil)
 (use-package smooth-scrolling
   :ensure t
   :init
@@ -49,7 +55,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (evil smooth-scroll use-package helm))))
+ '(package-selected-packages (quote (## evil smooth-scroll use-package helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
