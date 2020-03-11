@@ -19,8 +19,12 @@ alias ll='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias e='emacs'
-alias emacs='emacs -nw'
+nh() { nohup "$1" > /dev/null 2>&1 < /dev/null & }
 
 # k8s
 alias k='kubectl'
+alias ka='kubectl --all-namespaces'
+alias kl='kubectl -n kube-logging'
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
