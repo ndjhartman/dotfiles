@@ -20,11 +20,38 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias e='emacs'
 nh() { nohup "$1" > /dev/null 2>&1 < /dev/null & }
+lc() { find . -type f -name '*' | xargs grep ""$1"" ; }
+
+pushd()
+{
+  if [ $# -eq 0 ]; then
+    DIR="${HOME}"
+  else
+    DIR="$1"
+  fi
+
+  builtin pushd "${DIR}" > /dev/null
+  pwd
+}
+
+pushd_builtin()
+{
+  builtin pushd > /dev/null
+  pwd
+}
+
+popd()
+{
+  builtin popd > /dev/null
+  pwd
+}
+
+alias cd='pushd'
+alias back='popd'
+alias flip='pushd_builtin'
 
 # k8s
 alias k='kubectl'
 alias ka='kubectl --all-namespaces'
 alias kl='kubectl -n kube-logging'
 
-
-export PATH="$HOME/.cargo/bin:$PATH"
