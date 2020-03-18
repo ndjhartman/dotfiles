@@ -13,6 +13,8 @@ alias gl='git log'
 alias gf='git fetch'
 alias gp='git pull'
 alias ga='git add'
+alias grh='git reset --hard'
+
 
 # CLI
 alias ll='ls -l --color=auto'
