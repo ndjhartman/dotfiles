@@ -22,7 +22,7 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias e='emacs'
 nh() { nohup "$1" > /dev/null 2>&1 < /dev/null & }
-lc() { find . -type f -name '*' | xargs grep ""$1"" ; }
+lc() { find . -type f -name ""$1"" | xargs grep ""$2"" ; }
 
 pushd()
 {
@@ -54,6 +54,6 @@ alias flip='pushd_builtin'
 
 # k8s
 alias k='kubectl'
+alias kgn='kubectl get nodes'
 alias ka='kubectl --all-namespaces'
 alias kl='kubectl -n kube-logging'
-
