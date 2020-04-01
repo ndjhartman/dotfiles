@@ -37,7 +37,7 @@ endif
 " Don't try to be vi compatible
 set nocompatible
 
-" Turn on syntax highdarking
+" Turn on syntax highlighting
 syntax on
 
 " For plugins to load correctly
@@ -106,10 +106,18 @@ nnoremap k gk
 nnoremap B ^
 nnoremap E $
 
-" Insert lines
-nnoremap <Enter> o<ESC>
-nnoremap OM O<ESC>
+" Normal binds
+nnoremap <Enter>    o<ESC>
+nnoremap <S-Enter>  O<ESC>
+nnoremap gr         i <Esc>
+nnoremap <Tab>      i  <Esc>`^
+nnoremap A          $a
 
-" Insert single character
-nnoremap gr i <Esc>r
-
+" Insert binds
+inoremap jk         <Esc>
+inoremap <C-a>      <Esc>^i
+inoremap <C-e>      <Esc>$a
+inoremap <M-f>      <Esc>Wi
+inoremap <M-b>      <Esc>Bi
+inoremap <C-f>      <right>
+inoremap <C-b>      <left>
