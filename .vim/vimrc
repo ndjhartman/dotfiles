@@ -105,7 +105,7 @@ nnoremap k gk
 " Normal binds
 nnoremap <Enter>    o<ESC>
 nnoremap <S-Enter>  O<ESC>
-nnoremap gr         i <Esc>
+nnoremap gr         i <Esc>r
 nnoremap <Tab>      i  <Esc>`^
 nnoremap A          $a
 
