@@ -5,10 +5,30 @@
 " Enable plugins
 if empty(glob('$HOME/.vim/autoload/plug.vim'))
   silent !curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 source $HOME/.vim/plugins.vim
+
+"""
+""" Tmux
+"""
+
+" Fix tmux termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set background=light
+set t_Co=256
+set termguicolors
+
+" Set cursor to line in insert mode
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+else
+  let &t_SI = "\e[5 q"
+  let &t_EI = "\e[2 q"
+endif
 
 """
 """ Vim
@@ -76,27 +96,6 @@ set writebackup
 " Colorscheme
 colorscheme ayu
 
-
-"""
-""" Tmux
-"""
-
-" Fix tmux termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set background=dark
-set t_Co=256
-set termguicolors
-
-" Set cursor to line in insert mode
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
-else
-    let &t_SI = "\e[5 q"
-    let &t_EI = "\e[2 q"
-endif
- 
 """
 """  Keymaps
 """
