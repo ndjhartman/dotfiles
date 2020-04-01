@@ -83,8 +83,6 @@ set softtabstop=2
 set expandtab
 set noshiftround
 " 
-" " Fix pastes
-set paste
 
 " Move ~ files to /tmp
 set backup
