@@ -96,3 +96,23 @@ else
     let &t_SI = "\e[5 q"
     let &t_EI = "\e[2 q"
 endif
+ 
+"""
+"""  Keymaps
+"""
+
+" Move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" Move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+
+" Insert lines
+nnoremap <Enter> o<ESC>
+nnoremap OM O<ESC>
+
+" Insert single character
+nnoremap gr i <Esc>r
+
