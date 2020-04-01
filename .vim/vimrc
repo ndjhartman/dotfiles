@@ -102,10 +102,6 @@ colorscheme ayu
 nnoremap j gj
 nnoremap k gk
 
-" Move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-
 " Normal binds
 nnoremap <Enter>    o<ESC>
 nnoremap <S-Enter>  O<ESC>
@@ -114,10 +110,4 @@ nnoremap <Tab>      i  <Esc>`^
 nnoremap A          $a
 
 " Insert binds
-inoremap jk         <Esc>
-inoremap <C-a>      <Esc>^i
-inoremap <C-e>      <Esc>$a
-inoremap <M-f>      <Esc>Wi
-inoremap <M-b>      <Esc>Bi
-inoremap <C-f>      <right>
-inoremap <C-b>      <left>
+inoremap jj         <Esc>
