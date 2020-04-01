@@ -54,6 +54,8 @@ alias flip='pushd_builtin'
 
 # k8s
 alias k='kubectl'
+alias kl='kubectl -n kube-logging'
 alias kgn='kubectl get nodes'
+alias kgp='kubectl get pods'
 alias ka='kubectl --all-namespaces'
 alias kl='kubectl -n kube-logging'
