@@ -60,8 +60,5 @@ alias kgp='kubectl get pods'
 alias ka='kubectl --all-namespaces'
 alias kl='kubectl -n kube-logging'
 
-# Set VIM location
-export VIMINIT="source $HOME/.config/vim/.vimrc"
-
 # Rebind Caps lock
-source $HOME/.Xmodmap
+xmodmap $HOME/.Xmodmap
