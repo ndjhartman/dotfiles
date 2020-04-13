@@ -21,6 +21,7 @@ alias ll='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias e='emacs'
+alias cat='bat'
 nh() { nohup "$1" > /dev/null 2>&1 < /dev/null & }
 lc() { find . -type f -name ""$1"" | xargs grep ""$2"" ; }
 
@@ -61,4 +62,6 @@ alias ka='kubectl --all-namespaces'
 alias kl='kubectl -n kube-logging'
 
 # Rebind Caps lock
-xmodmap $HOME/.Xmodmap
+if [ -f ~/.Xmodmap ] ; then
+  xmodmap ~/.Xmodmap
+fi
