@@ -18,6 +18,7 @@ alias grh='git reset --hard'
 
 # CLI
 alias ll='ls -l --color=auto'
+alias la='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias e='emacs'
@@ -60,8 +61,3 @@ alias kgn='kubectl get nodes'
 alias kgp='kubectl get pods'
 alias ka='kubectl --all-namespaces'
 alias kl='kubectl -n kube-logging'
-
-# Rebind Caps lock
-if [ -f ~/.Xmodmap ] ; then
-  xmodmap ~/.Xmodmap
-fi
