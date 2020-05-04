@@ -1,7 +1,6 @@
 """
 """ Plugins
 """
-
 " Enable plugins
 if empty(glob('$HOME/.vim/autoload/plug.vim'))
   silent !curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs
@@ -14,8 +13,6 @@ call plug#begin('~/.vim/plugged')
 
     " Status line
     Plug 'itchyny/lightline.vim'
-    set laststatus=2
-    set noshowmode
 
     " Color scheme
     Plug 'sonph/onehalf'
@@ -24,14 +21,21 @@ call plug#begin('~/.vim/plugged')
     Plug 'Yggdroot/indentLine'
     let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
-    " Nerd tree
+    " NERD
     Plug 'preservim/nerdtree'
+    Plug 'preservim/nerdcommenter'
 
-    " Coding
+    " Syntax
     Plug 'kchmck/vim-coffee-script'
 
-    " Nerd commenter
-    Plug 'preservim/nerdcommenter'
+    " Multiple cursors
+    Plug 'terryma/vim-multiple-cursors'
+
+    " Perms
+    Plug 'tpope/vim-eunuch'
+
+    "
+    Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -98,6 +102,15 @@ set incsearch
 " Highlight searching
 set hlsearch
 
+" Smart case matching
+set ignorecase
+set smartcase
+
+" Disable status line for airlin
+set laststatus=2
+set noshowmode
+
+
 " Fix tabbing
 set wrap
 set textwidth=79
@@ -127,12 +140,18 @@ colorscheme onehalflight
 let mapleader = " "
 
 " Normal binds
-nnoremap <Enter>    o<ESC>
-nnoremap <S-Enter>  O<ESC>
-nnoremap gr         i <Esc>r
-nnoremap <Tab>      i  <Esc>`^
-nnoremap <leader>o  :NERDTreeToggle<CR>
-nnoremap <leader>p  :set invnumber<CR>:IndentLineToggle<CR>
+nnoremap <CR>                       o<ESC>
+nnoremap <S-CR>                     O<ESC>
+nnoremap gr                         i <Esc>r
+nnoremap <Tab>                      i  <Esc>`^
+nnoremap <leader>p                  :set invnumber<CR>:IndentLinesToggle<CR>
+nnoremap <leader><CR>               :nohls<CR>
+nnoremap <leader>csx                 :Chmod +x<CR>
+nnoremap <leader>cse                :SudoEdit<CR>
+nnoremap <leader>csw                :SudoWrite<CR>
+nnoremap <leader>n                  :NERDTreeToggle<CR>
+noremap  <Leader>/                   :call NERDComment(0,"toggle")<C-m>
+
 
 " Insert binds
 inoremap jj         <Esc>
