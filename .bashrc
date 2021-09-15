@@ -1,13 +1,16 @@
 # Nathan Hartman's bash profile
 
 # Misc
-alias vbp='vi ~/.bash_profile'
-alias sbp='source ~/.bash_profile'
+alias vbp='vi ~/.bashrc'
+alias sbp='source ~/.bashrc'
 
 # Git
 alias gs='git status'
+alias gb='git branch'
 alias gd='git diff'
+alias gc='git checkout'
 alias gcm='git commit -m'
+alias gca='git commit --amend'
 alias gcam='git commit -a -m'
 alias gl='git log'
 alias gf='git fetch'
@@ -22,7 +25,6 @@ alias la='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias e='emacs'
-alias cat='bat'
 nh() { nohup "$1" > /dev/null 2>&1 < /dev/null & }
 lc() { find . -type f -name ""$1"" | xargs grep ""$2"" ; }
 
@@ -35,7 +37,6 @@ pushd()
   fi
 
   builtin pushd "${DIR}" > /dev/null
-  pwd
 }
 
 pushd_builtin()
