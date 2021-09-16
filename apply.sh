@@ -4,7 +4,7 @@ DOTFILES="\
 		.vim/ \
 		.tmux/.tmux.conf \
 		.tmux/.tmux.conf.local \
-		.bash_profile \
+		.bashrc \
 		.Xmodmap \
 		.config/* \
 		"
@@ -16,4 +16,11 @@ for FILE in $DOTFILES; do
 		ln -s -f "$DIR"/"$FILE" $HOME
 done 
 
-source $HOME/.bash_profile
+sudo apt install -y \
+	bat \
+	tldr \
+	colormake \
+	git \
+
+
+source $HOME/.bashrc
