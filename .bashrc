@@ -20,7 +20,7 @@ alias grh='git reset --hard'
 
 
 # CLI
-alias ll='ls -l --color=auto'
+alias ll='ls -la --color=auto'
 alias la='ls -la --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'

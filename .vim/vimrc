@@ -130,7 +130,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " Colorscheme
-colorscheme onehalflight
+colorscheme onehalfdark
 
 """
 """  Keymaps
