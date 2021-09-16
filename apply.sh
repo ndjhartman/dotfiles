@@ -16,7 +16,7 @@ for FILE in $DOTFILES; do
 		ln -s -f "$DIR"/"$FILE" $HOME
 done 
 
-sudo apt install -y \
+sudo apt-get install -y \
 	bat \
 	tldr \
 	colormake \

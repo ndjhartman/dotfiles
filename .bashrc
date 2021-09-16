@@ -33,6 +33,7 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias make='clear; colormake'
 alias e='emacs'
+alias cat='batcat'
 
 pushd()
 {
