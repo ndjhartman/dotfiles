@@ -110,6 +110,10 @@ set smartcase
 set laststatus=2
 set noshowmode
 
+" Disable bell
+set visualbell
+set t_vb=
+
 
 " Fix tabbing
 set wrap
