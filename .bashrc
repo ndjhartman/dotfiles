@@ -29,11 +29,11 @@ alias kl='kubectl -n kube-logging'
 # CLI
 alias ll='ls -la --color=auto'
 alias la='ls -la --color=auto'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias make='clear; colormake'
 alias e='emacs'
-alias cat='batcat'
 
 pushd()
 {
