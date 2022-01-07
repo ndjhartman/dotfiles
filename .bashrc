@@ -30,6 +30,7 @@ alias kl='kubectl -n kube-logging'
 alias ll='ls -la --color=auto'
 alias la='ls -la --color=auto'
 alias ls='ls --color=auto'
+alias cp="rsync -ah --progress"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -pv'
 alias make='clear; colormake'
