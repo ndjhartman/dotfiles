@@ -64,7 +64,7 @@ alias back='popd'
 alias flip='pushd_builtin'
 
 # Make history more informative
-HISTSIZE=100
+HISTSIZE=10000
 HISTFILE=~/.history
 HISTCONTROL=ignoredups
 HISTCONTROL=erasedups
