@@ -62,3 +62,11 @@ popd()
 alias cd='pushd'
 alias back='popd'
 alias flip='pushd_builtin'
+
+# Make history more informative
+HISTSIZE=100
+HISTFILE=~/.history
+HISTCONTROL=ignoredups
+HISTCONTROL=erasedups
+HISTIGNORE="history:pwd:date:ls:ls *:man *"
+HISTTIMEFORMAT="%h %d %H:%M:%S> "
